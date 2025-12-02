@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verifikasi PDF</title>
+
+    <!-- Load CSS -->
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <div class="container">
+      <h1>Verifikasi PDF</h1>
+      <p class="subtitle">Silakan lakukan verifikasi dokumen PDF anda
+        disini!</p>
+
+      <!-- Upload file -->
+      <div class="upload-box">
+        <input type="file" id="pdfInput" accept="application/pdf">
+        <button class="btn" type="button" onclick="verifikasi()">Verifikasi</button>
+      </div>
+
+      <!-- Hasil Verifikasi -->
+      <div id="resultSection" class="result-box" style="display:none;">
+        <h3>Hasil Verifikasi Dokumen</h3>
+
+        <p><strong>Nama Perusahaan:</strong> <span
+            id="resPerusahaan"></span></p>
+        <p><strong>Nama Dokumen:</strong> <span id="resDokumen"></span></p>
+        <p><strong>Nomor Serial:</strong> <span id="resSerial"></span></p>
+
+        <!-- Preview PDF -->
+        <embed id="pdfViewer" class="pdf-preview" type="application/pdf">
+      </div>
+    </div>
+
+    <!-- Load JavaScript -->
+    <script src="script.js"></script>
+
+  </body>
+</html>
